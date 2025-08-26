@@ -1,0 +1,31 @@
+/* Individual Page Background Images */
+.login-page, .register-page, .forgot-password-page {
+    background-image: url(../images/background_login.png) !important;
+    background-size: cover !important;
+    background-position: center !important;
+    background-repeat: no-repeat !important;
+    height: 100vh !important;
+    width: 100% !important;
+}
+
+/* Buttons */
+.btn1 {
+    background-color: #710014 !important;
+    color: white !important;
+    padding: 10px 20px !important;
+    border: none !important;
+    border-radius: 5px !important;
+    cursor: pointer !important;
+}
+
+.btn1:hover {
+    background-color: #4e0c17 !important;
+}
+
+/* Seal CSS */
+.cics_seal {
+    width: 15% !important;
+    height: 15% !important;
+}
+
+/* Forgot Password Container */
