@@ -165,7 +165,7 @@
         </div>
 
         <!-- Form -->
-        <form>
+        <form id="registerForm">
           <div class="mb-3">
             <div class="row mb-3">
               <div class="col">
@@ -262,6 +262,14 @@
         specializationSelect.removeAttribute("required");
         specializationSelect.value = "";
       }
+    });
+
+    // Redirect to login after submit
+    document.getElementById("registerForm").addEventListener("submit", function (e) {
+      e.preventDefault(); // prevent real form submit for now
+
+      alert("Registration successful! Redirecting to login...");
+      window.location.href = "{{ route('login') }}";
     });
   </script>
 </body>
