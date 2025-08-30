@@ -1,11 +1,19 @@
 /* Individual Page Background Images */
-.login-page, .register-page, .forgot-password-page {
+.login-page,
+.register-page,
+.forgot-password-page,
+.password-reset-page {
     background-image: url(../images/background_login.png) !important;
     background-size: cover !important;
     background-position: center !important;
     background-repeat: no-repeat !important;
     height: 100vh !important;
     width: 100% !important;
+}
+
+/* Links */
+a:hover {
+    color: #af1733 !important;
 }
 
 /* Buttons */
@@ -28,4 +36,11 @@
     height: 15% !important;
 }
 
-/* Forgot Password Container */
+/* Card Shadow */
+#login-card,
+#register-card,
+#forgot-card,
+#reset-card {
+    box-shadow: 5px 5px 50px 20px rgba(51, 51, 51, 0.253) !important;
+}
+

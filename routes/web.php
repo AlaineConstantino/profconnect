@@ -14,6 +14,10 @@ Route::get('/forgotpassword', function () {
     return view('forgotpassword');
 })->name('forgotpassword');
 
+Route::get('/resetpassword', function () {
+    return view('passwordreset');
+})->name('passwordreset');
+
 Route::get('/', function () {
     return redirect()->route('login');
 })->name('root');
