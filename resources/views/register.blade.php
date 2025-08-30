@@ -35,19 +35,19 @@
             <h1 class="mb-3">Sign Up</h1>
           </div>
 
-          <!-- Form -->
-          <form>
-            <div class="mb-3">
-              <div class="row mb-3">
-                <div class="col">
-                  <label for="Fname" class="form-label">First Name</label>
-                  <input type="text" class="form-control" id="Fname" name="Fname" required>
-                </div>
-                <div class="col">
-                  <label for="Lname" class="form-label">Last Name</label>
-                  <input type="text" class="form-control" id="Lname" name="Lname" required>
-                </div>
+        <!-- Form -->
+        <form id="registerForm">
+          <div class="mb-3">
+            <div class="row mb-3">
+              <div class="col">
+                <label for="Fname" class="form-label">First Name</label>
+                <input type="text" class="form-control" id="Fname" name="Fname" required>
               </div>
+              <div class="col">
+                <label for="Lname" class="form-label">Last Name</label>
+                <input type="text" class="form-control" id="Lname" name="Lname" required>
+              </div>
+            </div>
 
               <div class="row mb-3">
                 <div class="col">
@@ -130,19 +130,25 @@
       const specializationRow = document.getElementById("specializationRow");
       const specializationSelect = document.getElementById("specialization");
 
-      yearSelect.addEventListener("change", function() {
-        if (this.value === "3" || this.value === "4") {
-          specializationRow.style.display = "flex";
-          specializationSelect.setAttribute("required", "required");
-        } else {
-          specializationRow.style.display = "none";
-          specializationSelect.removeAttribute("required");
-          specializationSelect.value = "";
-        }
-      });
-    </script>
+    yearSelect.addEventListener("change", function () {
+      if (this.value === "3" || this.value === "4") {
+        specializationRow.style.display = "flex";
+        specializationSelect.setAttribute("required", "required");
+      } else {
+        specializationRow.style.display = "none";
+        specializationSelect.removeAttribute("required");
+        specializationSelect.value = "";
+      }
+    });
 
+    // Redirect to login after submit
+    document.getElementById("registerForm").addEventListener("submit", function (e) {
+      e.preventDefault(); // prevent real form submit for now
 
+      alert("Registration successful! Redirecting to login...");
+      window.location.href = "{{ route('login') }}";
+    });
+  </script>
 </body>
 
 </html>
